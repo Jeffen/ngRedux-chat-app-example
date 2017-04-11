@@ -1,0 +1,16 @@
+<div class="item" (click)="clicked($event)">
+  <div class="ui tiny image">
+    <img class="media-object avatar"
+         src="{{thread.avatarSrc}}">
+    <div class="floating ui red label" *ngIf="unreadMessages !== 0" style="left: 5px; border-radius: 100%;">{{unreadMessages}}</div>
+  </div>
+  <div class="content">
+    <h2 class="header">{{thread.name}}
+      <span *ngIf="selected">&bull;</span>
+    </h2>
+    <div class="description">
+      {{thread.messages[thread.messages.length - 1].text}}
+    </div>
+  </div>
+  <div class="ui divider"></div>
+</div>

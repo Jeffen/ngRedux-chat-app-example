@@ -1,0 +1,38 @@
+.chat-window-container{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 270px;
+}
+.top-bar{
+    position: relative;
+}
+.panel-title-container{
+    padding: 5px;
+}
+.panel-buttons-container{
+    position: absolute;
+    right: -10px;
+    top: -5px;
+}
+.panel-buttons-container button{
+    background: transparent !important;
+    font-size: 1em;
+}
+.panel-body{
+    padding: 0 1em;
+    max-height: 300px;
+    overflow-y: scroll;
+    margin: 0;
+}
+.input-group{
+    width: 100%;
+    margin-top: 10px;
+}
+.qing {
+    background: #4ecdc4 !important;
+    color: #f7f7f7;
+}

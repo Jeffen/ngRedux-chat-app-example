@@ -1,0 +1,42 @@
+<div class="chat-window-container">
+  <div class="chat-window">
+    <div class="panel-container">
+      <div class="panel panel-default">
+
+        <div class="panel-heading top-bar" (click)="togglePanel()">
+          <div class="panel-title-container">
+            <h4 class="panel-title">
+              <i class="ui icon comments"></i>
+              与 {{currentThread.name}} 的聊天
+            </h4>
+          </div>
+          <div class="panel-buttons-container">
+            <button class="ui tiny icon button" *ngIf="!close"><i class="i icon close"></i></button>
+            <button class="ui tiny icon button" *ngIf="close"><i class="i icon maximize"></i></button>
+          </div>
+        </div>
+
+        <div class="panel-body msg-container-base ui comments" *ngIf="!close">
+          <app-chat-message
+               *ngFor="let message of currentThread.messages"
+               [message]="message">
+          </app-chat-message>
+        </div>
+
+        <div class="panel-footer" *ngIf="!close">
+          <div class="input-group ui action input">
+            <input type="text"
+                   class="chat-input"
+                   placeholder="Write your message here..."
+                   (keydown.enter)="onEnter($event)"
+                   [(ngModel)]="draftMessage.text" />
+                   <button class="btn-chat ui qing button"
+                 (click)="onEnter($event)"
+                 >Send</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

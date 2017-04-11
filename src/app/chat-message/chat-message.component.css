@@ -1,0 +1,40 @@
+.msg-container{
+    margin-bottom: 30px !important;
+}
+.text{
+    position: relative;
+    padding: 15px;
+    margin: 1em 0 3em;
+    color: #f7f7f7 !important;
+    background: #ff6b6b;
+    border-radius: 10px;
+    font-weight: 100;
+}
+.not-client .text:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    width: 0;
+    border-width: 15px 20px 20px 0px;
+    border-style: solid;
+    border-color: transparent #ff6b6b
+}
+.is-client .text:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: -10px;
+    width: 0;
+    border-width: 15px 0 20px 20px;
+    border-style: solid;
+    border-color: transparent #ff6b6b
+}
+.metadata{
+    right: 0;
+    position: absolute;
+        bottom: -15px;
+        font-size: .7em !important;
+}

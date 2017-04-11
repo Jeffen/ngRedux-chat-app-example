@@ -1,0 +1,21 @@
+<div class="msg-container comment not-client" *ngIf="incoming">
+  <div class="avatar">
+    <img src="{{message.author.avatarSrc}}">
+  </div>
+  <div class="messages content">
+    <div class="text">{{message.text}}</div>
+    <div class="metadata"><span class="date">{{message.sentAt | fromNow}}</span></div>
+  </div>
+</div>
+
+
+<div class="msg-container comment is-client" *ngIf="!incoming">
+  <div class="avatar right" style="float:right;">
+    <img src="{{message.author.avatarSrc}}">
+  </div>
+  <div class="messages content" style="margin-right: 3.5em; margin-left: 0">
+    <div class="text">{{message.text}}</div>
+    <div class="metadata"><span class="date">{{message.sentAt | fromNow}}</span></div>
+  </div>
+
+</div>
